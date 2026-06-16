@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Eventure Hub</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="dashboard">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Eventure Hub home">
+        <span class="brand-mark">E</span>
+        <span>Eventure Hub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact-hero">
+      <div>
+        <p class="eyebrow">Your dashboard</p>
+        <h1>Manage registrations and event history.</h1>
+      </div>
+      <p>Registrations are saved in your browser using Local Storage, so you can add, review, and cancel bookings without a backend.</p>
+    </section>
+
+    <section class="section dashboard-shell">
+      <div class="dashboard-stats" id="dashboardStats"></div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current bookings</p>
+          <h2>Registered events</h2>
+        </div>
+        <a class="button button-secondary" href="events.html">Find Events</a>
+      </div>
+      <div class="registration-list" id="registrationList"></div>
+      <div class="empty-state hidden" id="emptyDashboard">
+        <h2>No registrations yet.</h2>
+        <p>Explore upcoming events and register for one to see it here.</p>
+        <a class="button button-primary" href="events.html">Browse Events</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Eventure Hub. Built with HTML, CSS, and JavaScript.</p>
+    <a href="contact.html">Contact support</a>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

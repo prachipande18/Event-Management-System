@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Eventure Hub</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="register">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Eventure Hub home">
+        <span class="brand-mark">E</span>
+        <span>Eventure Hub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact-hero">
+      <div>
+        <p class="eyebrow">Registration</p>
+        <h1>Reserve your spot.</h1>
+      </div>
+      <p id="registrationIntro">Complete the form and your event will appear in the dashboard.</p>
+    </section>
+
+    <section class="section form-layout">
+      <aside class="summary-panel" id="selectedEventSummary"></aside>
+      <form class="form-panel" id="registrationForm" novalidate>
+        <div class="form-grid">
+          <label>
+            Full name
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+            <span class="field-error" data-error-for="fullName"></span>
+          </label>
+          <label>
+            Email address
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="field-error" data-error-for="email"></span>
+          </label>
+          <label>
+            Phone number
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            <span class="field-error" data-error-for="phone"></span>
+          </label>
+          <label>
+            Event
+            <select id="eventSelect" name="eventSelect" required></select>
+            <span class="field-error" data-error-for="eventSelect"></span>
+          </label>
+          <label>
+            Tickets
+            <input type="number" id="tickets" name="tickets" min="1" max="5" value="1" required>
+            <span class="field-error" data-error-for="tickets"></span>
+          </label>
+          <label>
+            Attendance mode
+            <select id="attendanceMode" name="attendanceMode" required>
+              <option value="">Select mode</option>
+              <option value="In person">In person</option>
+              <option value="Online">Online</option>
+            </select>
+            <span class="field-error" data-error-for="attendanceMode"></span>
+          </label>
+        </div>
+        <label>
+          Notes
+          <textarea id="notes" name="notes" rows="4" placeholder="Accessibility needs, team name, or questions"></textarea>
+        </label>
+        <button class="button button-primary" type="submit">Confirm Registration</button>
+        <div class="success-message hidden" id="registrationSuccess" role="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Eventure Hub. Built with HTML, CSS, and JavaScript.</p>
+    <a href="contact.html">Contact support</a>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

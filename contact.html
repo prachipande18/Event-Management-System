@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Eventure Hub</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Eventure Hub home">
+        <span class="brand-mark">E</span>
+        <span>Eventure Hub</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero compact-hero">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Questions, partnerships, and event support.</h1>
+      </div>
+      <p>Reach the Eventure Hub team for attendee help, organizer requests, or campus event coordination.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <div class="contact-info">
+        <article>
+          <span class="metric">Mail</span>
+          <h2>Email</h2>
+          <p>support@eventurehub.example</p>
+        </article>
+        <article>
+          <span class="metric">Phone</span>
+          <h2>Support Desk</h2>
+          <p>+91 98765 43210</p>
+        </article>
+        <article>
+          <span class="metric">Visit</span>
+          <h2>Office</h2>
+          <p>Innovation Block, Main Campus, Pune</p>
+        </article>
+      </div>
+
+      <form class="form-panel" id="contactForm" novalidate>
+        <label>
+          Name
+          <input type="text" id="contactName" name="contactName" autocomplete="name" required>
+          <span class="field-error" data-error-for="contactName"></span>
+        </label>
+        <label>
+          Email
+          <input type="email" id="contactEmail" name="contactEmail" autocomplete="email" required>
+          <span class="field-error" data-error-for="contactEmail"></span>
+        </label>
+        <label>
+          Subject
+          <input type="text" id="subject" name="subject" required>
+          <span class="field-error" data-error-for="subject"></span>
+        </label>
+        <label>
+          Message
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="field-error" data-error-for="message"></span>
+        </label>
+        <button class="button button-primary" type="submit">Send Message</button>
+        <div class="success-message hidden" id="contactSuccess" role="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Eventure Hub. Built with HTML, CSS, and JavaScript.</p>
+    <a href="events.html">Browse events</a>
+  </footer>
+
+  <script src="assets/js/events-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
